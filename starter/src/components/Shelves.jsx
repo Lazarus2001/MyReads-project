@@ -5,7 +5,6 @@ const Shelves = ({ books, ChangeShelf }) => {
         { id:1, shelf: 'currentlyReading', title: 'Currently Reading' },
         { id:2, shelf: 'wantToRead', title: 'Want to Read' },
         { id:3, shelf: 'read', title: 'Read' },
-        { id: 4, shelf: 'none' }
     ];
 
     return (

@@ -4,7 +4,7 @@ const Book = ({ book, ChangeShelf }) =>
 {
     // api attributes 
     const imgUrl = book.imageLinks?.thumbnail
-    const authorName = book?.publisher
+    const authorName = book?.authors
     const title = book.title
     const option = useRef("")
     
@@ -29,7 +29,7 @@ const Book = ({ book, ChangeShelf }) =>
                 ></div>
                 <div className="book-shelf-changer">
                     <select
-                     defaultValue={book.shelf? book.shelf : "none"} 
+                     defaultValue={book.shelf? book.shelf : "None"} 
                      onChange={handelRef} ref={option} >
                         <option value="none" disabled>
                             Move to...
@@ -40,7 +40,7 @@ const Book = ({ book, ChangeShelf }) =>
                         </option>
                         <option value="wantToRead">Want to Read</option>
                         <option value="read">Read</option>
-                        <option value="none">None</option>
+                        <option value="None">None</option>
                     </select>
                 </div>
             </div>

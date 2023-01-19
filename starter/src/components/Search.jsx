@@ -28,7 +28,19 @@ const Search = ({ ChangeShelf, books }) => {
                 setSearched([])
         }else if (isClear)
             {
-                setSearched(searchValue)
+                setSearched(searchValue.map(searchedBook=>
+                    {
+                        books.forEach((book)=>
+                        {
+                            if (searchedBook.title === book.title) 
+                            {searchedBook.shelf = book.shelf}
+                           
+                        })
+                    return searchedBook
+                    })
+                
+
+                )
             }
             
         console.log(searchValue);
